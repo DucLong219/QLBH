@@ -22,7 +22,10 @@ const routes: Routes = [
     {
         path: 'auth',
         loadChildren: () =>
-            import('modules/auth/auth-routing.module').then(m => m.AuthRoutingModule),
+            import('modules/auth/auth-routing.module').then(m =>{
+                console.log(m,'11111111');
+                
+                return m.AuthRoutingModule} ),
     },
     {
         path: 'error',
